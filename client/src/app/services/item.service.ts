@@ -3,32 +3,32 @@ import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class TaskService{
+export class ItemService{
 	constructor(private http:Http){
-		console.log('Task Service Initialized...');
+		console.log('Item Service Initialized...');
 	}
 
-	getTasks(){
-		return this.http.get('/api/tasks')
+	getItems(){
+		return this.http.get('/api/items')
 			.map(res => res.json());
 	}
 
-	addTask(newTask){
+	addItem(newItem){
 		var headers = new Headers();
 		headers.append('Content-Type', 'application/json');
-		return this.http.post('/api/task', JSON.stringify(newTask), {headers: headers})
+		return this.http.post('/api/item', JSON.stringify(newItem), {headers: headers})
 			.map(res => res.json());
 	}
 
-	deleteTask(id){
-		return this.http.delete('/api/task/'+id)
+	deleteItem(id){
+		return this.http.delete('/api/item/'+id)
 			.map(res => res.json());
 	}
 
-	updateStatus(task){
+	updateStatus(item){
 		var headers = new Headers();
 		headers.append('Content-Type', 'application/json');
-		return this.http.put('/api/task/'+task._id, JSON.stringify(task), {headers: headers})
+		return this.http.put('/api/item/'+item._id, JSON.stringify(item), {headers: headers})
 			.map(res => res.json());
 	}
 }

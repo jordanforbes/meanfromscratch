@@ -1,0 +1,27 @@
+.thimage{
+	height:300px;
+	margin-left:-40px;
+	margin-top:-30px;
+}
+.imgbox{
+	height:200px;
+	width:100px;
+	border:1px black dashed;
+}
+.thumbnail{
+	filter:grayscale(100%);
+	opacity:.5;
+	display:block;
+	float:left;
+	border:0px;
+	border-radius:0%;
+	padding:0px;
+	padding-top:0px;
+	margin-top:-20px;
+	overflow:hidden;
+}
+.thumbnail:hover{
+
+	filter:grayscale(0%);
+	opacity:1;
+}

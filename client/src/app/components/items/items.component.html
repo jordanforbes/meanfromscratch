@@ -1,0 +1,26 @@
+<!-- <form class="well" (submit)="addItem($event)">
+	<div class="form-group">
+		<input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add Item...">
+	</div>
+</form> -->
+	<br>
+<div class="container">
+	<div class="col-md-4 item-list">
+		<div *ngFor= "let item of items">
+				<div class="thumbnail">
+					<div class="imgbox">
+						<img class="thimage" src= "{{ item.image }}" >	
+					</div>
+				</div>		
+		</div>
+	</div>
+
+	<div class="col-md-4 big-image">
+		<div *ngFor= "let item of items">
+				
+						<img src= "{{ item.image }}" >	
+					
+		</div>
+	</div>
+
+</div>
